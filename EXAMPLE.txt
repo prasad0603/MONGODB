@@ -1,0 +1,37 @@
+HOW TO CREATE DATABASE AND COLLECTIONS(MONGO DB)
+1.This will create a new database named example. If a database named example already exists, it will start using it
+command-use college
+
+2.This will create a collection name students inside the college database.
+command-db.createCollection("students")
+
+3.This will print the list of collections in your current database.
+command-show collections
+
+4.The above command inserts the documents into the collection.
+command for insert one Document-db.student.insertOne({name:"prasad",age:20,branch:"cst")}
+command for insert two Documents-db.student.insertMany([{name:"Pavan sai",age:21,branch:"csd"},{name:"sowmya",age:23,branch:"csc"}])
+
+5.This command gives you the number of documents in the collection.
+command-db.student.count()
+
+6.This command lists all the documents in the collection mycollection
+command-db.student.find()
+note:Notice that mongodb automatically adds an ‘_id’ field to every document in order to uniquely identify the document.
+
+CRUED OPERATONS(MONGOBD)
+R-READ
+Let us try out different ways of querying documents.
+
+1.Find the count of documents.
+db.student.count()
+2.List the first document in the collection.
+db.student.findOne()
+3.List all documents in the collection.
+db.student.find()
+4.List first 2 documents in the collection.
+db.student.find().limit(3)
+5.view have to view branch cst in your collecions
+db.student.find({branch:"cst")
+
+
